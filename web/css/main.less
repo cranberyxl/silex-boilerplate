@@ -1,0 +1,51 @@
+// bootstrap
+@import "../bootstrap/bootstrap.less";
+@import "../bootstrap/responsive.less";
+
+// my vars
+@import "vars.less";
+@import "mixins.less";
+
+.nowrap {
+    white-space: nowrap;
+}
+
+// my styles
+.madlibs {
+    line-height: @baseLineHeight * 2.25;
+    font-size: @baseFontSize * 2.25;
+    p {
+        margin: .5em 0;
+        .sentence {
+            padding-right: .5em;
+            .input {
+                position: relative;
+                bottom: -6px;
+                display: inline-block;
+                input {
+                    .placeholder(@grayLighter);
+                    font-family: @handwritingFontFamily;
+                    font-size: @baseFontSize * 1.75;
+                    height: @baseFontSize * 1.75 + 1;
+                    border: 0;
+                    .border-radius(0);
+                    .box-shadow(none);
+                    background: none;
+                }
+                .hint {
+                    position: absolute;
+                    border-top: 1px solid @grayLight;
+                    color: @grayLight;
+                    left: 0;
+                    width: 100%;
+                    font-size: 11px;
+                    text-align: center;
+                    line-height: 12px;
+                    bottom: 6px;
+                    font-style: italic;
+                    text-transform: lowercase;
+                }
+            }
+        }
+    }
+}
