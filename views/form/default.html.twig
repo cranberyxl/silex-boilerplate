@@ -1,0 +1,16 @@
+{% extends '/base.html.twig' %}
+
+{% block content %}
+    <div class="page-header">
+        <h1>{{ title }}</h1>
+    </div>
+
+    <form action="#" class="form-horizontal" method="post">
+        {{ form_widget(form, {'form_type': 'horizontal'}) }}
+        <div class="control-group">
+            <div class="controls">
+                <button type="submit" class="btn">Save</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}
